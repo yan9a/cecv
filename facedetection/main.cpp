@@ -14,7 +14,7 @@ void detectAndDisplay(Mat frame)
 	std::vector<Rect> faces;
 	Mat frame_gray;
 
-	cvtColor(frame, frame_gray, CV_BGR2GRAY);
+	cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
 	equalizeHist(frame_gray, frame_gray);
 
 	//-- Detect faces
@@ -55,17 +55,17 @@ int main(int argc, char** argv)
 	else { printf("Video is opened. \n"); }
 
 	union { int v; char c[5]; } uEx;
-	uEx.v = static_cast<int>(cap.get(CV_CAP_PROP_FOURCC));
+	uEx.v = static_cast<int>(cap.get(CAP_PROP_FOURCC));
 	uEx.c[4] = '\0';
 	printf("Codec: %s \n", uEx.c);
 
 	cap.set(CAP_PROP_FRAME_WIDTH, 1280);
 	cap.set(CAP_PROP_FRAME_HEIGHT, 720);
 	cap.set(CAP_PROP_FPS, 30);
-	Size S = Size((int)cap.get(CV_CAP_PROP_FRAME_WIDTH), (int)cap.get(CV_CAP_PROP_FRAME_HEIGHT));
+	Size S = Size((int)cap.get(CAP_PROP_FRAME_WIDTH), (int)cap.get(CAP_PROP_FRAME_HEIGHT));
 	printf("Frame size: %d x %d \n", S.width, S.height);
 
-	double rate = cap.get(CV_CAP_PROP_FPS);//Frame rate
+	double rate = cap.get(CAP_PROP_FPS);//Frame rate
 	printf("Frame rate: %f \n", rate);
 	int dperiod = 15;
 

@@ -5,7 +5,7 @@ int main()
 {
 //Read original image
 Mat image;
-image = imread("C:/opencv/grove.jpg",1);
+image = imread("./grove.jpg",1);
 //image = imread("/home/yan/grove.jpg",1);
 if (!image.data) {
 printf("No image data \n");

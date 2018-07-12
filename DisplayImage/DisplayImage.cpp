@@ -4,7 +4,7 @@ using namespace cv;
 int main(int argc, char** argv )
 {
 	Mat image;
-	image = imread( "/home/yan/thiri.jpg", 1 );
+	image = imread( "./thiri.jpg", 1 );
 	if ( !image.data ) {
 		printf("No image data \n");
 		return -1;

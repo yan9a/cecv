@@ -121,7 +121,7 @@ Mat ButterworthFilter(int height, int width, float cutoffFreq, int order, bool h
 int main(int argc, char** argv)
 {
 	//Get an image
-	Mat image = imread("C:/opencv/blur.jpg", IMREAD_GRAYSCALE);
+	Mat image = imread("./blur.jpg", IMREAD_GRAYSCALE);
 	if (!image.data) {
 		printf("No image data \n");
 		return -1;
