@@ -10,7 +10,8 @@
  int main(int argc, char** argv)
  {
  Mat image;
- image = imread("C:/opencv/lane.jpg", 1);
+ // image = imread("C:/opencv/lane.jpg", 1);
+ image = imread("./lane.jpg", 1);
  if (!image.data) {
  printf("No image data \n");
  return -1;
@@ -46,3 +47,4 @@
  waitKey(0);
  return 0;
  }
+ 

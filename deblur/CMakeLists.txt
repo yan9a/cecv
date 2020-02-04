@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( deblur )
+find_package( OpenCV REQUIRED )
+add_executable( deblur deblur.cpp )
+target_link_libraries( deblur ${OpenCV_LIBS} )
